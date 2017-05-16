@@ -5,11 +5,10 @@ from cx_Freeze import setup, Executable
 build_exe_options = {"includes": ["tkinter","os", "sys", "zipfile", "smtplib", "email.mime.application", "email.mime.multipart", \
 		    "email.mime.text", "email.utils", "txt_to_order", "chardet", "codecs"],
                      "include_files":['tcl86t.dll','tcl86tg.dll','tk86t.dll',\
-                                      'tk86tg.dll','msvcm90.dll','msvcp90.dll',\
-                                      'msvcr90.dll', 'msvcr100.dll', 'text_order.config', 'txt_to_order.py']}
+                                      'tk86tg.dll', 'text_order.config', 'txt_to_order.py']}
 
-os.environ['TCL_LIBRARY'] = "D:\\Python3.4\\Lang\\tcl\\tcl8.6"
-os.environ['TK_LIBRARY'] = "D:\\Python3.4\\Lang\\tcl\\tk8.6"
+os.environ['TCL_LIBRARY'] = "D:\\Python\\Lang\\tcl\\tcl8.6"
+os.environ['TK_LIBRARY'] = "D:\\Python\\Lang\\tcl\\tk8.6"
 
 # GUI applications require a different base on Windows (the default is for a
 # console application).
