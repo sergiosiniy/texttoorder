@@ -1,0 +1,6 @@
+__pycache__
+*.log
+build/
+.git/
+*.txt
+
