@@ -54,7 +54,11 @@ class order_to_frf:
         BLOCKSIZE = 1048576
         with open(path_to_txt, 'rb') as text:
             file_encoding = chardet.detect(text.read())['encoding']
-        
+            print(file_encoding)
+            #fix missdetect
+            if file_encoding == "MacCyrillic":
+                file_encoding = "windows-1251"
+
         with codecs.open(path_to_txt, 'r', file_encoding) as source:
             with codecs.open(path_to_result, 'w', 'windows-1251') as result:
                 while True:
